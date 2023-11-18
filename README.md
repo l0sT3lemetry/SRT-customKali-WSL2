@@ -1,5 +1,5 @@
 # SRT-customKali-WSL2
-This gets a kali custom rootfs installed and ready to use on LP+
+This gets a kali custom rootfs installed and ready to use on LP+, it is all hardcoded. sorry..
 ## Install rootfs
 Powershell as Admin.
 ```

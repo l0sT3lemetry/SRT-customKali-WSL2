@@ -34,7 +34,7 @@ Start-Sleep -Seconds 1
 
 Expand-Archive .\lxrun.zip
 Remove-Item .\lxrun.zip
-.\lxrun\LxRunOffline.exe install -n kali-WSL2 -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
+.\lxrun\LxRunOffline.exe install -n kali-SRT -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 
 # more cleanup
 Remove-Item .\lxrun -Recurse

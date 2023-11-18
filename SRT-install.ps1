@@ -13,7 +13,7 @@ the ability to download
 
 Write-Host "I hope you won't regret this... installing."
 
-mkdir C:\kali
+mkdir ~\kali
 
 cd \kali
 
@@ -31,7 +31,7 @@ iwr https://www.dropbox.com/s/<redacted>/kali-linux-rolling-wsl-rootfs-amd64.tar
 iwr https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.5.0/LxRunOffline-v3.5.0-msvc.zip -o lxrun.zip
 
 Expand-Archive .\lxrun.zip
-
+Remove-Item .\lxrun.zip
 .\lxrun\LxRunOffline.exe install -n kali-WSL2 -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 
 # more cleanup

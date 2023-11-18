@@ -22,7 +22,7 @@ Remove-Item .\wsl_update_x64.msi
 
 Start-Sleep -Seconds 1
 
-wsl --set-default-version 2
+.\wsl.exe --set-default-version 2
 
 Write-Host "Downloading root filesystem."
 # Add dl=1 to download from cmd line when using dropbox
@@ -34,6 +34,7 @@ Start-Sleep -Seconds 1
 
 Expand-Archive .\lxrun.zip
 Remove-Item .\lxrun.zip
+Start-Sleep -Seconds 1
 .\lxrun\LxRunOffline.exe install -n kali-SRT -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 
 # more cleanup

@@ -30,6 +30,8 @@ iwr https://www.dropbox.com/s/<redacted>/kali-linux-rolling-wsl-rootfs-amd64.tar
 Write-Host "Downloading LxRunOffline."
 iwr https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.5.0/LxRunOffline-v3.5.0-msvc.zip -o lxrun.zip
 
+Start-Sleep -Seconds 3
+
 Expand-Archive .\lxrun.zip
 Remove-Item .\lxrun.zip
 .\lxrun\LxRunOffline.exe install -n kali-WSL2 -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz

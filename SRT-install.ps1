@@ -20,11 +20,14 @@ Write-Host "Complete the install before continuing."
 Pause
 Remove-Item .\wsl_update_x64.msi
 
+Start-Sleep -Seconds 5
+
 wsl --set-default-version 2
 
-Write-Host "Downloading root filesystem and LxRunOffline, it's up to you to trust these files."
+Write-Host "Downloading root filesystem."
 # Add dl=1 to download from cmd line when using dropbox
 iwr https://www.dropbox.com/s/<redacted>/kali-linux-rolling-wsl-rootfs-amd64.tar.gz?dl=1 -o kali-linux-rolling-wsl-rootfs-amd64.tar.gz
+Write-Host "Downloading LxRunOffline."
 iwr https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.5.0/LxRunOffline-v3.5.0-msvc.zip -o lxrun.zip
 
 Expand-Archive .\lxrun.zip

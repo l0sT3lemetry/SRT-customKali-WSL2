@@ -9,4 +9,8 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 Restart-Computer
 ```
+Download script
+```
+iwr https://raw.githubusercontent.com/l0sT3lemetry/SRT-customKali-WSL2/main/SRT-install.ps1 -o SRT-install.ps1
+```
 Then run the script.

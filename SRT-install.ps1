@@ -12,10 +12,7 @@ the ability to download
 #>
 
 Write-Host "I hope you won't regret this... installing."
-
-mkdir ~\kali
-
-cd \kali
+cd ~
 
 Invoke-Webrequest -Uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -outfile wsl_update_x64.msi
 Invoke-Item .\wsl_update_x64.msi

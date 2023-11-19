@@ -22,7 +22,7 @@ Remove-Item .\wsl_update_x64.msi
 
 Start-Sleep -Seconds 1
 
-.\wsl.exe --set-default-version 2
+wsl.exe --set-default-version 2
 
 Write-Host "Downloading root filesystem."
 # Add dl=1 to download from cmd line when using dropbox

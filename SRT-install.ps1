@@ -11,14 +11,14 @@ root CA installed
 the ability to download
 #>
 
-Write-Host "I hope you won't regret this... installing."
-cd ~
+Write-Host "Attempting to install."
+cd ~\desktop
 
 Invoke-Webrequest -Uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -outfile wsl_update_x64.msi
 Invoke-Item .\wsl_update_x64.msi
 Write-Host "Complete the install before continuing."
 Pause
-Remove-Item .\wsl_update_x64.msi
+#Remove-Item .\wsl_update_x64.msi
 
 Start-Sleep -Seconds 1
 
@@ -36,12 +36,12 @@ Expand-Archive .\lxrun.zip
 
 Start-Sleep -Seconds 1
 
-.\lxrun\LxRunOffline.exe install -n kali-SRT -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
+.\lxrun\LxRunOffline.exe install -n kali -d .\kali\ -f .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 
 # more cleanup
-Remove-Item .\lxrun.zip
-Remove-Item .\lxrun -Recurse
-Remove-Item .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
+#Remove-Item .\lxrun.zip
+#Remove-Item .\lxrun -Recurse
+#Remove-Item .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 
 wsl --list --verbose
 Write-Host "You should see kali above and in a stopped state if this script worked."

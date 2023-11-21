@@ -33,7 +33,7 @@ $dlHash = Get-FileHash -Algorithm sha256 $outFile | select Hash
 Write-Host "Original file hash: " $kaliHash
 Write-Host "Download file hash: " $dlHash.Hash
 if ( $kaliHash -eq $dlHash.Hash ) { Write-Host "Match." -ForegroundColor Green }
-Else { "Download Corrupt or you didn't change the original file hash." -ForegroundColor Red }
+Else { Write-Host "Download Corrupt or you didn't change the original file hash." -ForegroundColor Red }
 
 Write-Host "Downloading LxRunOffline.`n"
 iwr https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.5.0/LxRunOffline-v3.5.0-msvc.zip -o lxrun.zip

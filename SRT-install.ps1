@@ -28,6 +28,7 @@ $ProgressPreference = 'SilentlyContinue'
 Write-Host "Downloading root filesystem. Progress will not be displayed to improve download speed.`n"
 # Add dl=1 to download from cmd line when using dropbox
 iwr https://www.dropbox.com/s/<redacted>/kali-linux-rolling-wsl-rootfs-amd64.tar.gz?dl=1 -o kali-linux-rolling-wsl-rootfs-amd64.tar.gz
+$ProgressPreference = 'Continue'
 $dlHash = Get-FileHash -Algorithm sha256 .\kali-linux-rolling-wsl-rootfs-amd64.tar.gz
 Write-Host "Original file hash: $kaliHash"
 Write-Host "Download file hash: $dlHash.Hash"

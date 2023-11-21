@@ -1,6 +1,5 @@
-*Currently this script does not work as expected due to dropbox downloads stopping before completion without warning or error. You can replace the download link with one of your own. Also it fails to install as a WSL2 instance and is also not upgradable.*
 # SRT-customKali-WSL2
-This gets a kali custom rootfs installed and ready to use on LP+, it is all hardcoded. sorry..
+This gets a kali custom rootfs installed and ready to use on LP+, it is all hardcoded, will add args later. Pull requests are welcome.
 ## Install rootfs
 Powershell as Admin.
 ```
